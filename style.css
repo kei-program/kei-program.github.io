@@ -1,0 +1,29 @@
+/* 画面全体の設定 */
+body {
+    background-color: #0d1117; /* GitHub風の深い紺色 */
+    color: #c9d1d9;           /* 目に優しい白 */
+    font-family: 'Consolas', 'Courier New', monospace; /* プログラミング風のフォント */
+    line-height: 1.6;
+    padding: 50px;
+}
+
+/* 見出しのデザイン */
+h1 {
+    color: #58a6ff;           /* 綺麗な青色 */
+    border-bottom: 2px solid #30363d;
+    padding-bottom: 10px;
+}
+
+/* リストのデザイン */
+ul {
+    background: #161b22;
+    padding: 20px 40px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+}
+
+/* 強調したい文字 */
+li {
+    margin-bottom: 10px;
+    color: #7ee787;           /* プログラムの成功色（緑） */
+}
