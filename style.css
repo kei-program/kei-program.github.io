@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* 画面全体の設定 */
 body {
     background-color: #0d1117; /* GitHub風の深い紺色 */
@@ -26,4 +30,68 @@ ul {
 li {
     margin-bottom: 10px;
     color: #7ee787;           /* プログラムの成功色（緑） */
+}
+
+.profile-icon {
+    width: 150px;       /* 横幅 */
+    height: 150px;      /* 縦幅 */
+    border-radius: 50%; /* 画像を丸く */
+    object-fit: cover;  /* なめらかに */
+    border: 3px solid #30363d; /* 枠線 */
+    margin-bottom: 20px; /* 画像の下に隙間 */
+}
+
+button {
+    background-color: #161b22; /* 背景 */
+    color: #c9d1d9;           /* 文字 */
+    border: 1px solid #30363d; /* 枠線 */
+    padding: 10px 20px;       /* ボタンの中の隙間 */
+    border-radius: 6px;       /* 角を丸く */
+    font-family: inherit;      /* フォントは全体に合わせる */
+    cursor: pointer;         /* マウスを乗せたら「手の形」に */
+    transition: all 0.2s; /* 変色のグラデーション */
+}
+
+button:hover {
+    background-color: #30363d; /* 変色 */
+    transform: translateY(-3px);  /* 上にあげる */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* 影 */
+}
+
+a {
+    color: #a3ceff;           /* 色 */
+    text-decoration: none;    /* 下線を消す */
+    transition: all 0.8s; /* 変色のグラデーション */
+}
+
+a:hover {
+    color: #8069b8;           /* 変色後の色 */
+    text-decoration: underline; /* 下線を入れる */
+}
+
+/* ナビゲーション */
+.navbar {
+    background-color: #161b22; /* 背景 */
+    padding: 10px 0;
+    position: sticky;         /*  画面上固定 */
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #30363d;
+}
+
+/* 「点」を消して横に並べる */
+.navbar ul {
+    list-style: none;         /* 黒丸を消す */
+    margin: 0;
+    padding: 0;
+    display: flex;            /* 横並びに */
+    justify-content: center;  /* 寄せる */
+    gap: 30px;                /* 隙間 */
+}
+
+/* メニューデザイン */
+.navbar a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #c9d1d9;
 }
