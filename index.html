@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>My Portfolio</title>
 </head>
+
 <body>
-    <section>
-        <h1>Welcome to My Page!</h1>
-        <p>エンジニアを目指して勉強中の大学生です。OS自作や、プログラムに興味があります！</p>
-        <hr>
-        <h2>使用可能な言語</h2>
+
+
+    <nav class="navbar">
         <ul>
-            <li>Python</li>
-            <li>HTML/CSS</li>
-            <li>C言語</li>
+            <li><a href="#title">Home</a></li>
+            <li><a href="#language">Languages</a></li>
+            <li><a href="https://github.com/kei-program" target="_blank">GitHub</a></li>
         </ul>
-    </section>
+    </nav>
+
+    <main>
+        <section class="title">
+            <img src="DSC_0889.JPG" alt="プロフィールアイコン" class="profile-icon">
+            <h1 id="title">Welcome to My Page!</h1>
+            <p>エンジニアを目指して勉強中の大学生です。OS自作や、プログラムに興味があります！</p>
+            <button id="boot-btn">押すなよ？押すなよ？絶対に押すなよ？</button>
+        </section>
+        <hr>
+        <section id="language" class="language">
+            <h2>使える言語</h2>
+            <ul>
+                <li>Python</li>
+                <li>HTML/CSS</li>
+                <li>C言語</li>
+            </ul>
+        </section>
+        <hr>
+        <section class="links">
+            <h2>Links</h2>
+            <a href="https://github.com/kei-program" target="_blank">GitHub Profile</a>
+        </section>
+        <footer>
+            <hr>
+            <p>&copy; 2026 Kei-Program</p>
+        </footer>
+        <script src="script.js"></script>
+    </main>
+
+
 </body>
+
 </html>
