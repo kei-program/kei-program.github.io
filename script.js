@@ -1,12 +1,43 @@
-// 1. HTMLの中の「ボタン」と「タイトル」を、JavaScriptの世界に連れてきます
 const btn = document.getElementById('boot-btn');
 const title = document.getElementById('title');
+const terminal = document.getElementById('terminal-box');
+const logContainer = document.getElementById('log-container');
 
-// 2. ボタンがクリックされたときの「動き」を登録します
+// 表示したいログのリスト（OS自作っぽい内容に！）
+const logs = [
+    "こ",
+    "ん",
+    "に",
+    "ち",
+    "は"
+];
+
 btn.addEventListener('click', function() {
-    // 3. タイトルの文字（innerHTML）を、OS起動風に書き換えます
-    title.innerHTML = "何もありませんーー <br> 何かあると思いました？<br> 残念！";
-    title.style.color = "#7ee787"; /* ついでに文字色を緑にします */
-    btn.innerHTML = "もう押せないよ"; /* ボタンの文字も変えます */
-    btn.style.opacity = "0.5";       /* ボタンを半透明にして、もう押せないっぽくします */
+    // 1. ターミナルを表示する
+    terminal.style.display = "block";
+    btn.disabled = true; // 連打できないようにする
+    btn.innerHTML = "Booting...";
+
+    // 2. ログを1行ずつ表示する（再帰的な処理）
+    let i = 0;
+    function showNextLog() {
+        if (i < logs.length) {
+            const p = document.createElement('p');
+            p.className = 'log-line';
+            p.innerText = "> " + logs[i];
+            logContainer.appendChild(p);
+            
+            // ログが増えたら自動で一番下までスクロール
+            terminal.scrollTop = terminal.scrollHeight;
+            
+            i++;
+            setTimeout(showNextLog, 600); // 0.6秒ごとに次の行を表示
+        } else {
+            // 全部終わったらタイトルを変える
+            title.innerHTML = "OS is Successfully Booted!";
+            btn.innerHTML = "System Running";
+        }
+    }
+
+    showNextLog();
 });

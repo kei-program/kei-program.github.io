@@ -95,3 +95,56 @@ a:hover {
     font-weight: bold;
     color: #c9d1d9;
 }
+
+#terminal-box {
+    background-color: #0d1117; /* 背景 */
+    color: #ebfcf5;           /* 色 */
+    font-family: 'Courier New', Courier, monospace; /* 等幅フォント */
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #30363d;
+    margin-top: 20px;
+    height: 150px;            /* 高さ固定 */
+    overflow-y: auto;         /* ログが増えたらスクロールできるように */
+    text-align: left;         /* 文字を左寄せに */
+    font-size: 0.9rem;
+    display: none;            /* 隠す */
+}
+
+.log-line {
+    margin: 5px 0;
+    border-left: 2px solid #7ee787;
+    padding-left: 10px;
+}
+
+
+
+
+
+
+/* --スマホ用 幅がXXpx以下-- */
+@media (max-width: 600px) {
+    
+    /* 1. ナビゲーションメニュー */
+    .navbar ul {
+        flex-direction: column; /* 横並び→縦並び */
+        gap: 10px;              /* 隙間 */
+        text-align: center;
+    }
+
+    /* 2. プロフィール */
+    .profile-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* 3. 全体の文字サイズ */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    /* 4. セクションの余白 */
+    section {
+        padding: 20px;
+    }
+}
