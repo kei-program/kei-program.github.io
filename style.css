@@ -118,6 +118,69 @@ a:hover {
 }
 
 
+/* --（calc.html）用デザイン-- */
+
+/* 入力エリアボックス */
+.calc-container {
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: #161b22; 
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #30363d;
+}
+
+/* 入力ラベル */
+.calc-label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #58a6ff; /* 見出しと同じ青色 */
+}
+
+/* 入力フォーム */
+.calc-input {
+    width: 100%;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    padding: 12px;
+    border-radius: 6px;
+    font-family: inherit;
+    box-sizing: border-box; /* 幅がはみ出さないように */
+}
+
+.calc-input:focus {
+    outline: none;
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3);
+}
+
+/* 計算結果の表示エリア */
+#resultArea {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #0d1117;
+    border-left: 4px solid #7ee787; 
+    border-radius: 4px;
+    display: none; /* 初期状態は隠す */
+}
+
+/* 結果内の強調文字 */
+#resultArea strong {
+    color: #7ee787;
+}
+
+/* 戻るリンク調整 */
+.back-home {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+
 
 
 

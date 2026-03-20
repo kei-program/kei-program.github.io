@@ -3,66 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>香水ノート計算機 🧪</title>
-    <style>
-        body { font-family: sans-serif; padding: 40px; line-height: 1.6; background-color: #fafafa; color: #333; }
-        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        input { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
-        button { background: #333; color: white; border: none; padding: 12px 20px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 16px; }
-        button:hover { background: #555; }
-        #resultArea { margin-top: 30px; padding: 20px; background: #f0f7ff; border-radius: 5px; display: none; }
-        .back-link { display: inline-block; margin-top: 20px; color: #666; text-decoration: none; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="calc-container">
         <h1>🧪 香水ノート計算機</h1>
-        <p>香水の構成成分を入力して、香りのバランスを診断しましょう。</p>
+    
+        <label class="calc-label">🍋 トップノート:</label>
+        <input type="text" id="topNotes" class="calc-input" placeholder="例: レモン, ベルガモット">
 
-        <label>🍋 トップノート:</label>
-        <input type="text" id="topNotes" placeholder="例: レモン, ベルガモット, ペパーミント">
+        <label class="calc-label">🌹 ミドルノート:</label>
+        <input type="text" id="middleNotes" class="calc-input" placeholder="例: ローズ, ジャスミン">
 
-        <label>🌹 ミドルノート:</label>
-        <input type="text" id="middleNotes" placeholder="例: ローズ, ジャスミン, ラベンダー">
+        <label class="calc-label">🌲 ラストノート:</label>
+        <input type="text" id="lastNotes" class="calc-input" placeholder="例: ムスク, アンバー">
 
-        <label>🌲 ラストノート:</label>
-        <input type="text" id="lastNotes" placeholder="例: ムスク, サンダルウッド, アンバー">
-
-        <button onclick="calculatePerfume()">計算する</button>
+        <button onclick="calculatePerfume()" style="width: 100%; margin-top: 20px;">計算する</button>
 
         <div id="resultArea"></div>
 
-        <a href="index.html" class="back-link">← メインページに戻る</a>
+        <a href="index.html" class="back-home">← メインページに戻る</a>
     </div>
-
-    <script>
-        function calculatePerfume() {
-            const top = document.getElementById('topNotes').value.split(',').filter(x => x.trim());
-            const middle = document.getElementById('middleNotes').value.split(',').filter(x => x.trim());
-            const last = document.getElementById('lastNotes').value.split(',').filter(x => x.trim());
-            
-            const resultArea = document.getElementById('resultArea');
-            if (top.length === 0 || middle.length === 0 || last.length === 0) {
-                alert("すべてのノートに何か入力してね！");
-                return;
-            }
-
-            const total = top.length + middle.length + last.length;
-            const topP = Math.round((top.length / total) * 100);
-            const middleP = Math.round((middle.length / total) * 100);
-            const lastP = Math.round((last.length / total) * 100);
-
-            resultArea.style.display = 'block';
-            resultArea.innerHTML = `
-                <h3>📊 診断結果</h3>
-                <p>・トップ（瞬発力）: ${topP}%<br>
-                ・ミドル（主役）: ${middleP}%<br>
-                ・ラスト（余韻）: ${lastP}%</p>
-                <p><strong>【アドバイス】</strong><br>
-                ${topP > 50 ? "トップが多めで、非常に爽やかなコロンタイプですね！" : "バランスが良く、香りの変化を楽しめる構成です。"}
-                </p>
-            `;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
