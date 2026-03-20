@@ -79,3 +79,15 @@ function calculatePerfume() {
         </p>
     `;
 }
+
+function resetForm() {
+    // 1. 各入力欄の値を空に
+    document.getElementById('topNotes').value = "";
+    document.getElementById('middleNotes').value = "";
+    document.getElementById('lastNotes').value = "";
+
+    // 2. 結果表示エリアを隠す
+    const resultArea = document.getElementById('resultArea');
+    resultArea.style.display = 'none';
+    resultArea.innerHTML = "";
+}
