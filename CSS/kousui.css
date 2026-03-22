@@ -73,3 +73,9 @@ li {
     margin-bottom: 20px; /* 画像の下に隙間 */
 }
 
+.kousui-No {
+    color: #ffffff;           
+    border-bottom: 2px solid #30363d;
+    padding-bottom: 10px;
+}
+
