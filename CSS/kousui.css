@@ -1,0 +1,75 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* 横方向 */
+    height: 200px;          
+}
+
+/* 画面全体の設定 */
+body {
+    background-color: #0d1117; /* GitHub風の深い紺色 */
+    color: #c9d1d9;           /* 目に優しい白 */
+    font-family: 'Consolas', 'Courier New', monospace; /* プログラミング風のフォント */
+    line-height: 1.6;
+    padding: 50px;
+}
+
+/* 見出しのデザイン */
+h1 {
+    color: #58a6ff;           /* 綺麗な青色 */
+    border-bottom: 2px solid #30363d;
+    padding-bottom: 10px;
+}
+
+/* リストのデザイン */
+ul {
+    background: #161b22;
+    padding: 20px 40px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+}
+
+/* 強調したい文字 */
+li {
+    margin-bottom: 10px;
+    color: #7ee787;           
+}
+
+/* ナビゲーション */
+.navbar {
+    background-color: #161b22; /* 背景 */
+    padding: 10px 0;
+    position: sticky;         /*  画面上固定 */
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #30363d;
+}
+
+/* 「点」を消して横に並べる */
+.navbar ul {
+    list-style: none;         /* 黒丸を消す */
+    margin: 0;
+    padding: 0;
+    display: flex;            /* 横並びに */
+    justify-content: center;  /* 寄せる */
+    gap: 30px;                /* 隙間 */
+}
+
+/* メニューデザイン */
+.navbar a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #c9d1d9;
+}
+
+.kousui-icon {
+    width: 300px;       /* 横幅 */
+    height: 300px;      /* 縦幅 */
+    object-fit: cover;  /* なめらかに */
+    border: 3px solid #30363d; /* 枠線 */
+    margin-bottom: 20px; /* 画像の下に隙間 */
+}
+
