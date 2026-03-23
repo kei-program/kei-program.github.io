@@ -3,9 +3,10 @@ html {
 }
 
 .container {
-    display: flex;
-    justify-content: center; /* 横方向 */
-    height: 200px;          
+  display: flex;
+  flex-direction: column; /* これを追加！子要素を「縦」に並べる命令です */
+  align-items: center;    /* 中身を中央に寄せたい場合はこれを追加 */     
+  min-height: 200px;    
 }
 
 /* 画面全体の設定 */
