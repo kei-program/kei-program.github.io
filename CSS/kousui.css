@@ -41,7 +41,7 @@ li {
 /* ナビゲーション */
 .navbar {
     background-color: #161b22; /* 背景 */
-    padding: 10px 0;
+    padding: 0.625rem 0;
     position: sticky;         /*  画面上固定 */
     top: 0;
     z-index: 100;
@@ -55,27 +55,28 @@ li {
     padding: 0;
     display: flex;            /* 横並びに */
     justify-content: center;  /* 寄せる */
-    gap: 30px;                /* 隙間 */
+    gap: 2rem;                /* 隙間 */
 }
 
 /* メニューデザイン */
 .navbar a {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: bold;
     color: #c9d1d9;
 }
 
 .kousui-icon {
-    width: 300px;       /* 横幅 */
-    height: 300px;      /* 縦幅 */
+    width: 12.5rem;       /* 横幅 */
+    height: 12.5rem;      /* 縦幅 */
     object-fit: cover;  /* なめらかに */
     border: 3px solid #30363d; /* 枠線 */
-    margin-bottom: 20px; /* 画像の下に隙間 */
+    margin-bottom: 1.25rem; /* 画像の下に隙間 */
 }
 
 .kousui-No {
     color: #ffffff;           
-    border-bottom: 2px solid #30363d;
-    padding-bottom: 10px;
+    border-bottom: 2px solid #2e2828c5;
+    padding-bottom: 0.675rem;
+    font-size: 1.5rem;
 }
 
