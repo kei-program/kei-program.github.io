@@ -17,6 +17,16 @@ body {
     padding: 50px;
 }
 
+.flex-container {
+  display: flex;       /* 横並び */
+  align-items: center; /* 垂直方向真ん中に */
+  gap: 20px;           /* 画像と文字の間の隙間 */
+}
+
+.flex-text {
+  flex: 1;               /* 残りの横幅を文字に */
+}
+
 /* 見出しのデザイン */
 h1 {
     color: #58a6ff;           /* 綺麗な青色 */
@@ -67,9 +77,9 @@ li {
 
 .kousui-icon {
     width: 20rem;       /* 横幅 */
-    height: 20rem;      /* 縦幅 */
+    height: auto;
     object-fit: cover;  /* なめらかに */
-    border: 3px solid #30363d; /* 枠線 */
+    border: 3px solid #393e44; /* 枠線 */
     margin-bottom: 1.25rem; /* 画像の下に隙間 */
 }
 
